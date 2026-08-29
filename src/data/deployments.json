@@ -1,0 +1,33 @@
+[
+  {
+    "deploymentId": "DEP-1801",
+    "service": "payment-service",
+    "version": "v1.8.1",
+    "deployedAt": "2026-08-20T10:00:00Z",
+    "status": "ROLLED_BACK",
+    "changes": [
+      "Minor payment logging improvements"
+    ]
+  },
+  {
+    "deploymentId": "DEP-1802",
+    "service": "payment-service",
+    "version": "v1.8.2",
+    "deployedAt": "2026-08-24T10:00:00Z",
+    "status": "ROLLED_BACK",
+    "changes": [
+      "Connection pool tuning"
+    ]
+  },
+  {
+    "deploymentId": "DEP-1803",
+    "service": "payment-service",
+    "version": "v1.8.3",
+    "deployedAt": "2026-08-27T16:40:00Z",
+    "status": "ACTIVE",
+    "changes": [
+      "Database timeout changed from 5000ms to 1000ms",
+      "Payment retry configuration updated"
+    ]
+  }
+]

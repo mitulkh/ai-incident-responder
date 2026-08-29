@@ -1,0 +1,23 @@
+[
+  {
+    "service": "payment-service",
+    "timestamp": "2026-08-27T16:40:00Z",
+    "phase": "PRE_INCIDENT",
+    "errorRate": 1.9,
+    "dbTimeoutMs": 5000
+  },
+  {
+    "service": "payment-service",
+    "timestamp": "2026-08-27T16:50:00Z",
+    "phase": "INCIDENT",
+    "errorRate": 18.7,
+    "dbTimeoutMs": 1000
+  },
+  {
+    "service": "payment-service",
+    "timestamp": "2026-08-27T17:05:00Z",
+    "phase": "POST_ROLLBACK",
+    "errorRate": 2.1,
+    "dbTimeoutMs": 5000
+  }
+]

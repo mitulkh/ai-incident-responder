@@ -1,0 +1,11 @@
+[
+  {
+    "incidentId": "INC-1001",
+    "service": "payment-service",
+    "severity": "CRITICAL",
+    "status": "OPEN",
+    "summary": "Payment failure rate increased significantly",
+    "errorRate": 18.7,
+    "startedAt": "2026-08-27T16:45:00Z"
+  }
+]

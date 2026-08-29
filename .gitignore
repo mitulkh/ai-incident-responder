@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Coverage / build output
+coverage/
+dist/
+build/
+
+# TrueForge / local runtime artifacts
+.venv/
+venv/
+__pycache__/
+*.pyc
