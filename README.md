@@ -482,6 +482,7 @@ Future recovery metrics are hidden from investigation tools.
 Service mitigation does not automatically resolve the incident record.
 Demo state can be reset deterministically.
 Failure-Safe Recovery Check
+- Rollback is rejected unless the affected service has an OPEN incident.
 
 Calling verify_recovery before rollback produces:
 

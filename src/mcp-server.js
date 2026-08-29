@@ -271,6 +271,7 @@ function createMcpServer() {
     },
     async ({ deploymentId }) => {
       const deployments = await loadJson("deployments.json");
+      const incidents = await loadJson("incidents.json");
 
       const deployment = deployments.find(
         (item) => item.deploymentId === deploymentId
@@ -299,7 +300,23 @@ function createMcpServer() {
           isError: true,
         };
       }
+const openIncident = incidents.find(
+  (item) =>
+    item.service === deployment.service &&
+    item.status === "OPEN"
+);
 
+if (!openIncident) {
+  return {
+    content: [
+      {
+        type: "text",
+        text: `Deployment ${deploymentId} cannot be rolled back because there is no OPEN incident for service ${deployment.service}.`,
+      },
+    ],
+    isError: true,
+  };
+}
       deployment.status = "ROLLED_BACK";
       deployment.rolledBackAt = new Date().toISOString();
 
@@ -315,6 +332,7 @@ function createMcpServer() {
                 action: "ROLLBACK",
                 deploymentId: deployment.deploymentId,
                 service: deployment.service,
+                incidentId: openIncident.incidentId,
                 version: deployment.version,
                 status: deployment.status,
                 rolledBackAt: deployment.rolledBackAt,

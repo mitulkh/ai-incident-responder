@@ -74,7 +74,7 @@ destructiveHint: true
 
 The agent must obtain explicit human approval before invoking it.
 
-If approval is rejected, no rollback should occur.
+If approval is rejected, no rollback should occur. In addition, rollback is rejected unless the deployment's service currently has an `OPEN` incident. This prevents the destructive MCP tool from being used against an unrelated active deployment outside the incident-response context.
 
 ## Recovery Boundary
 
